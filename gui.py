@@ -107,7 +107,7 @@ def evalvideo():
         outtext.insert(tk.END, "Feature extraction failed for video frame.\n")
         return
     feats = np.array(feats).reshape(1, -1)
-    proj = os.path.join(os.path.dirname(__file__), "jumpshottrainer")
+    proj = os.path.join(os.path.dirname(__file__), "")
     modpath = os.path.join(proj, "models", "shotqualitymodel.keras")
     try:
         mdl = tf.keras.models.load_model(modpath)
